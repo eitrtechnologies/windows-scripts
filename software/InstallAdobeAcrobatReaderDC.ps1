@@ -15,7 +15,7 @@ $HTTPContent = Invoke-WebRequest "https://www.adobe.com/devnet-docs/acrobatetk/t
 $Version = $HTTPContent.Links | ForEach {$_.outerHTML} | Select-String Next | ForEach {$_.Line.split()} | Select-String title | ForEach {$_.Line.split('"')[1] -replace '[.]',''}
 
 # Download the installer from the Adobe website
-$Source = "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/{0}/AcroRdrDC{0}_MUI.exe" -f $Version
+$Source = "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/{0}/AcroRdrDC{0}_en_US.exe" -f $Version
 $Destination = "$InstallDir\AcroRdrDC_en_US.exe"
 Invoke-WebRequest $Source -OutFile $Destination
 
