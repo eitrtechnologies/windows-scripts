@@ -1,6 +1,13 @@
 # EITR Windows Scripts
 Some (hopefully) helpful Windows scripts.
 
+## GCC High
+
+### `EnableInformationProtectionLabels.ps1`
+
+Enable Sensitivity Labels on GCC High. This script modifies the Azure AD directory settings and then synchronizes with
+Office through the Exchange Online Management module.
+
 ## Software
 
 ### `InstallAdobeAcrobatReaderDC.ps1`
